@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+    version="4.0"
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:javaee="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+  <display-name>Archetype Created Web Application</display-name>
+  <listener>
+  <listener-class>org.apache.naming.factory.BeanFactory</listener-class>
+</listener>
+  
+  <welcome-file-list>
+        <welcome-file>menu.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <!-- MenuServlet -->
+	<servlet>
+		<servlet-name>ViewMenuServlet</servlet-name>
+		<servlet-class>com.humber.restaurant.servlet.ViewMenuServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewMenuServlet</servlet-name>
+		<url-pattern>/menu</url-pattern>
+	</servlet-mapping>
+
+	<!-- AddMenuServlet -->
+	<servlet>
+		<servlet-name>AddMenuItemServlet</servlet-name>
+		<servlet-class>com.humber.restaurant.servlet.AddMenuItemServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddMenuItemServlet</servlet-name>
+		<url-pattern>/addMenuItem</url-pattern>
+	</servlet-mapping>
+
+	<!-- EditMenuServlet -->
+	<servlet>
+    <servlet-name>UpdateMenuItemServlet</servlet-name>
+    <servlet-class>com.humber.restaurant.servlet.UpdateMenuItemServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>UpdateMenuItemServlet</servlet-name>
+    <url-pattern>/editMenuItem</url-pattern>
+</servlet-mapping>
+
+
+	<servlet>
+    <servlet-name>DeleteMenuItemServlet</servlet-name>
+    <servlet-class>com.humber.restaurant.servlet.DeleteMenuItemServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>DeleteMenuItemServlet</servlet-name>
+    <url-pattern>/deleteMenuItem</url-pattern>
+</servlet-mapping>
+
+    
+    
+</web-app>

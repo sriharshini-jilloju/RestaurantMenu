@@ -1,0 +1,22 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- JDBC Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/restaurant_db</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Jilloju1002</property>
+
+        <!-- Hibernate Dialect for MySQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Automatically update the database schema -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Show SQL queries in the console -->
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- Add entity mappings (your entities should be annotated with @Entity) -->
+        <mapping class="com.humber.restaurant.model.Category"/>
+        <mapping class="com.humber.restaurant.model.MenuItem"/>
+    </session-factory>
+</hibernate-configuration>
